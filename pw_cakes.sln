@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35303.130
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pw_cakes.Server", "pw_cakes.Server\pw_cakes.Server.csproj", "{16019FC0-E92E-4E82-9F09-CF281D5A0C2A}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "pw_cakes.client", "pw_cakes.client\pw_cakes.client.esproj", "{B2DEC636-B90A-4571-9E59-F9992257ABD8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{16019FC0-E92E-4E82-9F09-CF281D5A0C2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16019FC0-E92E-4E82-9F09-CF281D5A0C2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16019FC0-E92E-4E82-9F09-CF281D5A0C2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16019FC0-E92E-4E82-9F09-CF281D5A0C2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2DEC636-B90A-4571-9E59-F9992257ABD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2DEC636-B90A-4571-9E59-F9992257ABD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2DEC636-B90A-4571-9E59-F9992257ABD8}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B2DEC636-B90A-4571-9E59-F9992257ABD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2DEC636-B90A-4571-9E59-F9992257ABD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2DEC636-B90A-4571-9E59-F9992257ABD8}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1409A3FA-46B7-4AB7-B947-B3C616306097}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,12 @@
+@import "primeflex/primeflex.css";
+
+body {
+    font-family: var(--font-family);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.ul-box{
+    background-color: #faefd6;
+    border-radius: 10px;
+}

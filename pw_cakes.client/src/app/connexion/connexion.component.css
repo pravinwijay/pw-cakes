@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+  
+  *:focus {
+    outline: none;
+  }
+
+  html, body {
+    font-family: Arial;
+    background-color: #caaacd;
+    margin: 0 !important;
+    padding: 0;
+    height: 100%;
+    
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+  }
+
+  /* NAV BAR */
+  .navbar {
+    width: 100%;
+    height: 50px;
+    background-color: #faefd6; 
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 0 20px; 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+    color: #FFF;
+  }
+  
+  .navbar a {
+    color: #777;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+  }
+  
+  .navbar a:hover {
+    text-decoration: underline;
+  }
+
+  .login {
+  margin: 20px auto;
+  width: 300px;
+  margin-right: 100px;
+  z-index: 1;
+  }
+
+  .login-screen {
+  background-color: #FFF;
+  padding: 20px;
+  border-radius: 10px
+  }
+  
+  .app-title {
+  text-align: center;
+  color: #777;
+  padding-bottom: 15px;
+  }
+  
+  .login-form {
+  text-align: center;
+  }
+
+  .control-group {
+  margin-bottom: 10px;
+  }
+  
+  input {
+  text-align: center;
+  background-color: #ECF0F1;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 200;
+  padding: 10px 0;
+  width: 250px;
+  transition: border .5s;
+  }
+  
+  input:focus {
+  border: 2px solid #3498DB;
+  box-shadow: none;
+  }
+  
+  .btn {
+    border: 2px solid transparent;
+    background: #faefd6;
+    color: #777;
+    font-size: 16px;
+    line-height: 25px;
+    padding: 10px 0;
+    text-decoration: none;
+    text-shadow: none;
+    border-radius: 10px;
+    box-shadow: none;
+    transition: 0.25s;
+    display: block;
+    width: 250px;
+    margin: 0 auto;
+  }
+  
+  .btn:hover {
+    background-color: #caaacd;
+    color: #FFF;
+  }
+  
+  .login-link {
+    font-size: 12px;
+    color: #444;
+    display: block;
+    margin-top: 12px;
+  }
