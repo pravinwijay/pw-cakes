@@ -6,18 +6,18 @@ namespace pw_cakes.Server.Entities
     public class Utilisateur
     {
         [Key, Column("id")]
-        public int id {  get; set; }
+        public int? id {  get; set; }
         [Column("nom")]
-        public string nom { get; set; }
+        public string? nom { get; set; }
         [Column("prenom")]
-        public string prenom { get; set; }
+        public string? prenom { get; set; }
         [Column("email")]
-        public string email { get; set; }
+        public string? email { get; set; }
         [Column("telephone")]
-        public int telephone { get; set; }
+        public int? telephone { get; set; }
         [Column("est_admin")]
-        public string est_admin { get; set; }
+        public string? est_admin { get; set; }
         [Column("mdp")]
-        public string mdp { get; set; }
+        public string? mdp { get; set; }
     }
 }
