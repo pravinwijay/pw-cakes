@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace pw_cakes.Server.Entities
 {
@@ -19,5 +20,9 @@ namespace pw_cakes.Server.Entities
         public string? est_admin { get; set; }
         [Column("mdp")]
         public string? mdp { get; set; }
+
+        // Un utilisateur peut passer plusieurs commandes
+        [JsonIgnore]
+        public ICollection<Commande> commandes { get; set; }
     }
 }

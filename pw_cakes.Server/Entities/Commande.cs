@@ -19,5 +19,10 @@ namespace pw_cakes.Server.Entities
         public DateTime? date_livraison { get; set; }
         [Column("type_livraison")]
         public string? type_livraison { get; set; }
+        [Column("prix")]
+        public double? prix {  get; set; }
+
+        // Clé étrangère
+        public Utilisateur utilisateur { get; set; }
     }
 }
