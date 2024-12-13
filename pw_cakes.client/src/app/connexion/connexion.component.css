@@ -14,7 +14,6 @@
     margin: 0 !important;
     padding: 0;
     height: 100%;
-    
   }
 
   body {
@@ -22,6 +21,15 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh; 
+  }
+
+  .logo-page-connexion{
+    position: absolute; /* Permet un positionnement avec top/left */
+    left: 20px; /* Ajuste la position sur l'axe X, à gauche */
+    top: 50%; /* Centre l'image sur l'axe Y */
+    transform: translateY(-50%); /* Corrige le décalage vertical dû au top 50% */
+    max-width: 100%; /* Assure que l'image ne dépasse pas les dimensions disponibles */
+    height: auto; 
   }
 
   /* NAV BAR */
@@ -53,7 +61,7 @@
 
   .login {
   margin: 20px auto;
-  width: 300px;
+  width: 400px;
   margin-right: 100px;
   z-index: 1;
   }
@@ -61,17 +69,20 @@
   .login-screen {
   background-color: #FFF;
   padding: 20px;
-  border-radius: 10px
+  border-radius: 10px;
+  height: 500px;
   }
   
   .app-title {
   text-align: center;
   color: #777;
   padding-bottom: 15px;
+  padding-top: 10px;
   }
   
   .login-form {
   text-align: center;
+  padding-top: 100px;
   }
 
   .control-group {

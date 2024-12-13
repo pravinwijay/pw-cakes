@@ -1,1 +1,26 @@
-﻿
+﻿/* NAV BAR */
+.navbar {
+    width: 100%;
+    height: 50px;
+    background-color: #faefd6; 
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 0 20px; 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+    color: #FFF;
+  }
+  
+  .navbar a {
+    color: #777;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+  }
+  
+  .navbar a:hover {
+    text-decoration: underline;
+  }
