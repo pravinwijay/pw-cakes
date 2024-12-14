@@ -1,0 +1,49 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    margin-top: 150px; /* Ajuste la distance sous la navbar */
+  }
+  
+  .image-card {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: auto;
+    height: auto;
+    transition: 1s;
+  }
+
+  .image-card:hover{
+    transform: scale(1.1);
+
+  }
+  
+  .image-card img {
+    width: 400px;
+    height:300px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    object-fit: cover;
+  }
+  
+  .image-card p {
+    font-size: 1rem;
+    color: #4a295a;
+  }
+  
+  footer {
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+    padding: 20px;
+  }
+  

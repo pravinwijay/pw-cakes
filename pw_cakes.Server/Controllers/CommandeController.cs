@@ -55,5 +55,3 @@ namespace pw_cakes.Server.Controllers
         }
     }
 }
-
-// dernier changement voir chatgpt
