@@ -1,18 +1,13 @@
-body{
-    display: flex;
-    flex-direction: column;
-}
-
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 70px;
-    margin-top: 150px; /* Ajuste la distance sous la navbar */
+    margin-top: 150px;
   }
   
   .image-card {
-    background-color: #fff;
+    background-color: #faefd6;
     padding: 10px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -24,7 +19,6 @@ body{
 
   .image-card:hover{
     transform: scale(1.1);
-
   }
   
   .image-card img {
