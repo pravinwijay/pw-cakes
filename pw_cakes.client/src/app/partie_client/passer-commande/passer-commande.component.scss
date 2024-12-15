@@ -1,0 +1,114 @@
+.commande-container {
+    width: 80%;
+    margin: 120px auto;
+    // background-color: #ffffff;
+    padding: 2rem;
+    // border-radius: 8px;
+    // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #faefd6;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 70px;
+    justify-content: space-between;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+::placeholder {
+    color :#faefd6
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #faefd6;
+}
+
+input {
+    height: 40px;
+    padding: 0 10px;
+    font-size: 16px;
+    border: 1px  #ccc;
+    background-color: #c5aeb5;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+    color: #faefd6;
+}
+
+/* Bouton de téléversement d'image */
+.btn-upload {
+    display: block;
+    margin: 0 auto; 
+    padding: 10px 20px;
+    background-color: #4a295a;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-upload:hover {
+    opacity: 0.9; /* Effet au survol */
+}
+
+input:focus {
+    border-color: #6c63ff;
+    outline: none;
+}
+
+.button-row {
+    display: flex;
+    gap: 300px;
+    margin-top: 40px;
+}
+
+button.btn {
+    width: 48%;
+    height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.btn.retour {
+    background-color: #faefd6;
+    color: #8f6d93;
+}
+
+button.btn.retour:hover {
+    background-color: #c5aeb5;
+    color: #fff;
+}
+
+button.btn.passer-commande {
+    background-color: #faefd6;
+    color: #8f6d93;
+}
+
+button.btn.passer-commande:hover {
+    background-color: #c5aeb5;
+    color: #fff;
+}

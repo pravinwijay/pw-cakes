@@ -18,7 +18,6 @@ import { ButtonModule } from 'primeng/button';
 import { RippleModule } from 'primeng/ripple';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +28,7 @@ import { RippleModule } from 'primeng/ripple';
     PasserCommandeComponent,
     ListeCommandesComponent,
     ModifCommandeComponent,
-    AjoutCatalogueComponent
+    AjoutCatalogueComponent,
   ],
   imports: [
     BrowserModule, HttpClientModule,
@@ -38,7 +37,8 @@ import { RippleModule } from 'primeng/ripple';
     StyleClassModule,
     ChipModule,
     ButtonModule,
-    RippleModule
+    RippleModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
