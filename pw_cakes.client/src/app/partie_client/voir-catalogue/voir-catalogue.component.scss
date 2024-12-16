@@ -1,0 +1,74 @@
+/* Conteneur principal */
+.gateau-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 100px 20px 20px;
+    white-space: nowrap;
+    overflow-x: auto;
+  }
+  
+  /* Carte individuelle */
+  .gateau-card {
+    background-color: #faefd6;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+  }
+  
+  /* Image */
+  .gateau-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  /* Titre */
+  .gateau-card h3 {
+    color: #4a295a;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  /* Paragraphe */
+  .gateau-card p {
+    color: #4a295a;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+  
+  /* Bouton Choisir */
+  .choisir-btn {
+    background-color: #f6e7cb;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 20px;
+    color: #4a295a;
+    font-size: 14px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .choisir-btn:hover {
+    background-color: #e6d4b8;
+  }
+  
+  .gateau-container::-webkit-scrollbar {
+    height: 8px; /* Taille de la barre de défilement */
+  }
+  
+  .gateau-container::-webkit-scrollbar-thumb {
+    background-color: #d1a3c8; /* Couleur de la barre de défilement */
+    border-radius: 4px;
+  }
+  
+  .gateau-container::-webkit-scrollbar-track {
+    background-color: #f4e4f2; /* Couleur de l'arrière-plan de la barre */
+  }
+  
