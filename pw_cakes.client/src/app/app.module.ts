@@ -16,6 +16,7 @@ import { ChipsModule } from 'primeng/chips';
 import { ChipModule } from 'primeng/chip';
 import { ButtonModule } from 'primeng/button';
 import { RippleModule } from 'primeng/ripple';
+import { VoirCatalogueComponent } from './partie_client/voir-catalogue/voir-catalogue.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { RippleModule } from 'primeng/ripple';
     ListeCommandesComponent,
     ModifCommandeComponent,
     AjoutCatalogueComponent,
+    VoirCatalogueComponent,
   ],
   imports: [
     BrowserModule, HttpClientModule,
