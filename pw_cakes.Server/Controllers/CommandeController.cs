@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using pw_cakes.Server.Dto;
-using pw_cakes.Server.Entities;
 using pw_cakes.Server.Services;
 
 namespace pw_cakes.Server.Controllers
