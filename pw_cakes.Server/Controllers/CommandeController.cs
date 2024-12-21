@@ -19,7 +19,7 @@ namespace pw_cakes.Server.Controllers
         /// <summary>
         /// Retourne la liste des commandes
         /// </summary>
-        /// <returns>Liste de commandes</returns>
+        /// <returns>La liste des commandes - 200 OK</returns>
         [HttpGet]
         public async Task<IActionResult> GetOrders()
         {
@@ -30,8 +30,7 @@ namespace pw_cakes.Server.Controllers
             }
             return Ok(commandes);
         }
-
-
+        
         /// <summary>
         /// Ajoute une commande de gâteau
         /// </summary>
@@ -44,13 +43,12 @@ namespace pw_cakes.Server.Controllers
             {
                 return BadRequest("Nul Germain");
             }
-
+            
             var nouvelleCommande = await _commandeService.AddOrderAsync(commandeDto);
             if (nouvelleCommande == null)
             {
                 return NotFound("Tjr nul");
             }
-
             return CreatedAtAction(nameof(GetOrders), new { id = nouvelleCommande.id }, nouvelleCommande);
         }
     }

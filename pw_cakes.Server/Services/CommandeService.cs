@@ -25,7 +25,7 @@ namespace pw_cakes.Server.Services
                 return null;
             }
 
-            // Création de la nouvelle commande
+            // CrÃ©ation de la nouvelle commande
             var commande = new Commande
             {
                 type = commandeDto.type,
@@ -37,10 +37,9 @@ namespace pw_cakes.Server.Services
                 id_client = commandeDto.id_client
             };
 
-            // Ajout à la BD
+            // Ajout Ã  la BD
             await _context.commandes.AddAsync(commande);
             await _context.SaveChangesAsync();
-
             return commande;
         }
     }

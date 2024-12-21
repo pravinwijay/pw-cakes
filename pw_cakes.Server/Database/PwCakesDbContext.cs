@@ -12,6 +12,7 @@ namespace pw_cakes.Server.Database
         {}
         public DbSet<Commande> commandes { get; set; }
         public DbSet<Utilisateur> utilisateurs { get; set; }
+        public DbSet<Catalogue> catalogue { get; set; }
 
         // Pour gérer la relation entre Commande et Utilisateur
         protected override void OnModelCreating(ModelBuilder modelBuilder)
