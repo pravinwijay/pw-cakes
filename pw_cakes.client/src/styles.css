@@ -1,6 +1,7 @@
 @import "primeflex/primeflex.css";
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@700&family=League+Spartan:wght@400;700&display=swap');
 html, body {
     height: 100%;
     margin: 0;
-    background-color: #8f6d93;
+    background-color: #ffffff;
 }

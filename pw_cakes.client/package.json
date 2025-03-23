@@ -22,6 +22,7 @@
     "@angular/platform-browser": "^18.2.0",
     "@angular/platform-browser-dynamic": "^18.2.0",
     "@angular/router": "^18.2.0",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "jest-editor-support": "*",
     "primeflex": "^3.3.1",
     "primeicons": "^7.0.0",

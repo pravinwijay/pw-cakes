@@ -7,7 +7,7 @@ import { InscriptionComponent } from './inscription/inscription.component';
 import { ConnexionComponent } from './connexion/connexion.component';
 import { AccueilClientComponent } from './partie_client/accueil-client/accueil-client.component';
 import { AccueilAdminComponent } from './partie_admin/accueil-admin/accueil-admin.component';
-import { PasserCommandeComponent } from './partie_client/passer-commande/passer-commande.component';
+
 import { ListeCommandesComponent } from './partie_admin/liste-commandes/liste-commandes.component';
 import { ModifCommandeComponent } from './partie_admin/modif-commande/modif-commande.component';
 import { AjoutCatalogueComponent } from './partie_admin/ajout-catalogue/ajout-catalogue.component';
@@ -26,11 +26,9 @@ import { VoirCatalogueComponent } from './partie_client/voir-catalogue/voir-cata
     ConnexionComponent,
     AccueilClientComponent,
     AccueilAdminComponent,
-    PasserCommandeComponent,
     ListeCommandesComponent,
     ModifCommandeComponent,
     AjoutCatalogueComponent,
-    VoirCatalogueComponent,
   ],
   imports: [
     BrowserModule, HttpClientModule,

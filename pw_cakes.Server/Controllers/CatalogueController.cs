@@ -7,46 +7,103 @@ using pw_cakes.Server.Services;
 namespace pw_cakes.Server.Controllers
 {
     [ApiController]
-    [Route("[catalogue]")]
+    [Route("catalogue")]
     [Tags("Catalogue")]
     public class CatalogueController : ControllerBase
     {
         private readonly CatalogueService _catalogueService;
-
         public CatalogueController(CatalogueService catalogueService)
         {
             _catalogueService = catalogueService;
         }
-        
+
         /// <summary>
-        ///  Retourne la liste des g√¢teaux du catalogue
+        /// Retourne la liste des g‚teaux du catalogue
         /// </summary>
-        /// <returns>La liste des g√¢teaux du catalogue - 200 OK</returns>
+        /// <returns></returns>
         [HttpGet]
-        public async Task<IActionResult> GetFromCatalogue()
+        public async Task<IActionResult> GetAllFromCatalogue()
         {
-            var catalogue = await _catalogueService.GetFromCatalogueAsync();
-            if (!catalogue.Any())
+            var catalogue = await _catalogueService.GetAllFromCatalogueAsync();
+            if(!catalogue.Any())
             {
-                return NotFound("Nothing to see");
+                return NotFound("Nothing here");
             }
             return Ok(catalogue);
         }
 
-        [HttpGet]
+        /// <summary>
+        /// Ajoute un g‚teau au catalogue
+        /// </summary>
+        /// <param name="catalogueDto"></param>
+        /// <returns></returns>
+        [HttpPost]
         public async Task<IActionResult> AddToCatalogue([FromBody] CatalogueDto catalogueDto)
+        {
+            if(catalogueDto == null)
+            {
+                return BadRequest("Catalogue is null");
+            }
+            var newCake = await _catalogueService.AddToCatalogueAsync(catalogueDto);
+            if(newCake == null)
+            {
+                return NotFound("Cake not found");
+            }
+            return CreatedAtAction(nameof(GetAllFromCatalogue), new { id = newCake.id }, newCake);
+        }
+
+        /// <summary>
+        /// Retourne un g‚teau du catalogue par son id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetFromCatalogueById(int id)
+        {
+            var cake = await _catalogueService.GetFromCatalogueByIdAsync(id);
+            if (cake == null)
+            {
+                return NotFound("Cake not found");
+            }
+            return Ok(cake);
+        }
+
+        /// <summary>
+        /// Met ‡ jour un g‚teau du catalogue
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="catalogueDto"></param>
+        /// <returns></returns>
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateCatalogue(int id, [FromBody] CatalogueDto catalogueDto)
         {
             if (catalogueDto == null)
             {
-                return BadRequest("Null catalogue");
+                return BadRequest("Catalogue is null");
             }
-            
-            var nouveauGateau = await _catalogueService.AddToCatalogueAsync(catalogueDto);
-            if (nouveauGateau == null)
+            var updatedCake = await _catalogueService.UpdateCatalogueAsync(id, catalogueDto);
+            if (updatedCake == null)
             {
-                return NotFound("Nothing to see");
+                return NotFound("Cake not found");
             }
-            return CreatedAtAction(nameof(GetFromCatalogue), new { id = nouveauGateau.id }, nouveauGateau);
+            return Ok(updatedCake);
+        }
+
+        /// <summary>
+        /// Supprime un g‚teau du catalogue
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteFromCatalogue(int id)
+        {
+            var cake = await _catalogueService.GetFromCatalogueByIdAsync(id);
+            if (cake == null)
+            {
+                return NotFound("Cake not found");
+            }
+            await _catalogueService.DeleteFromCatalogueAsync(cake.id);
+            return Ok();
         }
     }
 }

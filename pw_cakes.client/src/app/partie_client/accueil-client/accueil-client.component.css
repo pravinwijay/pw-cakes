@@ -1,43 +1,151 @@
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 70px;
-    margin-top: 170px;
-  }
-  
-  .image-card {
-    background-color: #faefd6;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    max-width: auto;
-    height: auto;
-    transition: 1s;
-  }
+main {
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  min-height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-  .image-card:hover{
-    transform: scale(1.1);
+.content {
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  padding: 10px 0;
+}
+
+.subheading {
+  font-weight: normal;
+  font-size: 1.2rem;
+  margin-bottom: -80px;
+}
+
+h1 {
+  font-family: 'Alumni Sans', sans-serif;
+  font-size: 7rem; /* Increased font size */
+  font-weight: 700;
+  line-height: 0.9;
+  color: #f5a623;
+  margin-bottom: 10px;
+  letter-spacing: -2px;
+}
+
+.description {
+  font-size: 1.1rem;
+  margin: 20px 0 30px;
+  line-height: 1.4;
+}
+
+.cta {
+  background: #f5a623;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 30px;
+  font-weight: bold;
+  margin: 0 auto 60px;
+  display: block;
+  width: fit-content;
+}
+
+/* Positionnement des images */
+.fruit {
+  position: absolute;
+  z-index: 2;
+  filter: blur(2px);
+}
+
+.strawberry {
+  width: 250px; /* Bigger strawberry */
+  top: 1%;
+  left: 5%;
+}
+
+.mango {
+  width: 270px; /* Bigger mango */
+  bottom: 13%;
+  left: 12%;
+}
+
+.chocolate-splashes {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.chocolate-splash {
+  position: absolute;
+  width: 70%; /* Larger chocolate splash */
+  right: -25%;
+  top: 1%;
+  z-index: 0;
+  opacity: 0.9;
+  filter: blur(2px);
+}
+
+.cupcakes {
+  position: relative;
+  z-index: 1;
+  margin: auto auto 20px;
+  width: 580px; /* Control the overall width */
+  text-align: center;
+}
+
+.cupcake-image {
+  max-width: 550px;
+  height: auto;
+  margin: 1px auto;
+}
+
+@media (max-width: 992px) {
+  h1 {
+      font-size: 5.5rem;
   }
   
-  .image-card img {
-    width: 400px;
-    height:300px;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    object-fit: cover;
+  .strawberry {
+      width: 160px;
   }
   
-  .image-card p {
-    font-size: 1rem;
-    color: #4a295a;
+  .mango {
+      width: 200px;
   }
   
-  footer {
-    text-align: center;
-    color: white;
-    margin-top: 20px;
-    padding: 20px;
+  .cupcakes {
+      width: 450px;
   }
   
+  .cupcake-image {
+      max-width: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+      font-size: 4rem;
+  }
+  
+  .strawberry {
+      width: 120px;
+  }
+  
+  .mango {
+      width: 150px;
+  }
+  
+  .cupcakes {
+      width: 350px;
+  }
+  
+  .cupcake-image {
+      max-width: 350px;
+  }
+}

@@ -13,9 +13,8 @@ namespace pw_cakes.Server.Entities
         public int nb_parts { get; set; }
         [Column("description")]
         public string description { get; set; }
-        [Column("iamge")]
-        public string image { get; set; }
-        
+        [Column("image")]
+        public string image { get; set; }   
     }
 }
 

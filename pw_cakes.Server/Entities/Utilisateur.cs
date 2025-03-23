@@ -15,9 +15,9 @@ namespace pw_cakes.Server.Entities
         [Column("email")]
         public string? email { get; set; }
         [Column("telephone")]
-        public int? telephone { get; set; }
+        public string? telephone { get; set; }
         [Column("est_admin")]
-        public string? est_admin { get; set; }
+        public bool? est_admin { get; set; }
         [Column("mdp")]
         public string? mdp { get; set; }
 

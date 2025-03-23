@@ -17,6 +17,7 @@ builder.Services.AddDbContext<PwCakesDbContext>(options =>
 
 builder.Services.AddScoped<CommandeService>();
 builder.Services.AddScoped<UtilisateurService>();
+builder.Services.AddScoped<CatalogueService>();
 
 var app = builder.Build();
 

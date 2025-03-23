@@ -50,5 +50,59 @@ namespace pw_cakes.Server.Controllers
             }
             return CreatedAtAction(nameof(GetOrders), new { id = nouvelleCommande.id }, nouvelleCommande);
         }
+
+        /// <summary>
+        /// Retourne une commande par son id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetOrderById(int id)
+        {
+            var commande = await _commandeService.GetOrderByIdAsync(id);
+            if (commande == null)
+            {
+                return NotFound("Commande introuvable");
+            }
+            return Ok(commande);
+        }
+
+        /// <summary>
+        /// Met à jour une commande
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="commandeDto"></param>
+        /// <returns></returns>
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateOrder(int id, [FromBody] CommandeDto commandeDto)
+        {
+            if (commandeDto == null)
+            {
+                return BadRequest("Commande nulle");
+            }
+            var updatedOrder = await _commandeService.UpdateOrderAsync(id, commandeDto);
+            if (updatedOrder == null)
+            {
+                return NotFound("Commande introuvable");
+            }
+            return Ok(updatedOrder);
+        }
+
+        /// <summary>
+        /// Supprime une commande
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteOrder(int id)
+        {
+            var deletedOrder = await _commandeService.DeleteOrderAsync(id);
+            if (deletedOrder == null)
+            {
+                return NotFound("Commande introuvable");
+            }
+            return Ok(deletedOrder);
+        }
     }
 }
